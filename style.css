@@ -1,0 +1,766 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --dark-green: #1F4529;
+    --medium-green: #47663B;
+    --light-green: #3E7B27;
+    --grayish-yellow: #E8ECD7;
+    --beige: #EED3B1;
+    --paragraph: #465b52;
+    --max-width: 1540px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: var(--dark-green);
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: var(--dark-green);
+}
+
+h4{
+    font-size: 20px;
+    color: var(--dark-green);
+}
+
+h6{
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--dark-green);
+}
+
+p{
+    font-size: 16px;
+    color: var(--paragraph);
+    margin: 15px 0 20px 0;
+}
+
+.btn-default{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: black;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.btn-default:hover{
+    color: white;
+    background-color: var(--dark-green);
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+.section-m{
+    margin: 40px 0;
+}
+
+/* SECTION BACKGROUND  */
+
+.primary-bg{
+    background-color: var(--grayish-yellow);
+}
+.banner-bg{
+    background-image: url("images/banner-bg.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.color-bg{
+    background-color: var(--dark-green);
+}
+
+/* MAIN HEADER  */
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--grayish-yellow);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 20px;
+}
+
+.logo{
+    width: 150px;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    color: var(--dark-green);
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+    color: var(--light-green);
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 40%;
+    height: 2px;
+    background-color: #3E7B27;
+    position: absolute;
+    bottom: -6px;
+    left: 20px;
+}
+
+#mobile{
+    display: none;
+}
+
+#close{
+    display: none;
+}
+
+/* HERO SECTION  */
+
+#hero{
+    max-width: var(--max-width);
+    margin: auto;
+    background-image: url("images/hero-bonsai.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top 25% right 0;
+    height: 100vh;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* #hero{
+    height: 100vh;
+    max-width: var(--max-width);
+    margin: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 300px 20px;
+}
+
+#hero .image img{
+    width: 600px;
+} */
+
+#hero h4{
+    padding-bottom: 15px;
+}
+
+#hero h1{
+    color: #85A947;
+}
+
+#hero button{
+    background-image: url("images/button.webp");
+    background-color: transparent;
+    color: #123524;
+    border: none;
+    padding: 14px 80px 14px 75px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+#hero button:hover{
+    color: #85A947;
+}
+
+/* FEATURES SECTION  */
+
+#features{
+    max-width: var(--max-width);
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 40px 20px;
+}
+
+#features .features-box{
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+#features .features-box:hover{
+    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+}
+
+#features .features-box img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#features .features-box h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    background-color: #fddde4;
+}
+
+#features .features-box:nth-child(2) h6{
+    background-color: #cdebbc;
+}
+#features .features-box:nth-child(3) h6{
+    background-color: #d1e8f2;
+}
+#features .features-box:nth-child(4) h6{
+    background-color: #cdd4f8;
+}
+#features .features-box:nth-child(5) h6{                                                        
+    background-color: #f6dbf6;
+}
+#features .features-box:nth-child(6) h6{
+    background-color: #fff2e5;
+}
+
+/* FEATURED PRODUCTS & NEW ARRIVALS */
+
+#featured-products,
+#new-arrivals{
+    text-align: center;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 40px 20px;
+}
+
+#featured-products .product-container,
+#new-arrivals .product-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+#featured-products .product,
+#new-arrivals .product{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+#featured-products .product:hover,
+#new-arrivals .product:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#featured-products .product img,
+#new-arrivals .product img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+#featured-products .product .desc,
+#new-arrivals .product .desc{
+    text-align: start;
+    padding: 10px 0;
+}
+
+#featured-products .product .desc span,
+#new-arrivals .product .desc span{
+    color: #606063;
+    font-size: 14px;
+}
+
+#featured-products .product .desc h5,
+#new-arrivals .product .desc h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 16px;
+}
+
+#featured-products .product .desc i,
+#new-arrivals .product .desc i{
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+
+#featured-products .product .desc h4,
+#new-arrivals .product .desc h4{
+    padding-top: 7px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #47663B;
+}
+
+#featured-products .product .cart,
+#new-arrivals .product .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    color: #123524;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    transition: 0.3s ease;
+}
+
+#featured-products .product .cart:hover,
+#new-arrivals .product .cart:hover{
+    background-color: #123524;
+    color: #e8f6ea;
+}
+
+/* CTA BANNER SECTION  */
+
+#cta-banner{
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 100px 20px;
+}
+
+#cta-banner h4{
+    color: white;
+    font-size: 18px;
+}
+
+#cta-banner h2{
+    color: white;
+    padding: 20px 0;
+}
+
+#cta-banner h2 span{
+    color: red;
+}
+
+/* OTHER BANNER SECTIONS */
+
+#banner2{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#banner2 .banner-box, 
+#banner2 .banner-box2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("images/banner/bonsai-banner.webp");
+    min-width: 49%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30px;
+    /* background blend mode */
+    background-color: rgba(0, 0, 0, 0.4); /* Black color with 50% opacity */
+    background-blend-mode: multiply; /* Blends image with background color */
+}
+
+#banner2 h2{
+    color: white;
+    margin: 8px 0;
+}
+
+#banner2 h4{
+    color: white;
+}
+
+#banner2 span{
+    color: white;
+    margin-bottom: 15px;
+}
+
+#banner2 .banner-box2{
+    background-image: url("images/banner/bonsai-banner3.webp");
+}
+
+
+#banner3{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#banner3 .banner-box3,
+#banner3 .banner-box4,
+#banner3 .banner-box5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url('images/banner/bonsai-banner4.webp');
+    min-width: 30%;
+    height: 25vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+}
+
+#banner3 .banner-box4{
+    background-image: url('images/banner/bonsai-banner5.webp');
+}
+
+#banner3 .banner-box5{
+    background-image: url('images/banner/bonsai-banner6.webp');
+}
+
+#banner3 h2{
+    color: white;
+    font-weight: 900;
+    font-size: 28px;
+}
+
+#banner3 h3{
+    font-size: 16px;
+    font-weight: 800;
+    color: red;
+}
+
+/* NEWSLETTER SECTION */
+
+#newsletter{
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 70px 20px;
+}
+
+#newsletter h4{
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+#newsletter p{
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#newsletter span{
+    color: #ffbd27;
+}
+
+#newsletter input{
+    height: 50px;
+    padding: 0 20px;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;  
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+#newsletter button{
+    background-color: var(--light-green);
+    white-space: nowrap;
+    color: white;
+    width: 100%;
+    max-width: 30%;
+    border-radius: 0 5px 5px 0;
+}
+
+#newsletter button:hover{
+    background-color: var(--beige);
+    color: black;
+}
+
+#newsletter .form{
+    display: flex;
+    width: 40%;
+}
+
+#footer{
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+#footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+#footer .logo{
+    margin-bottom: 30px;
+}
+
+#footer h4{
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+#footer p{
+    font-size: 14px;
+    margin: 0 0 8px 0;
+}
+
+#footer a{
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--dark-green);
+    margin-bottom: 10px;
+}
+
+#footer .follow{
+    margin-top: 20px;
+}
+
+#footer .follow i{
+    color: gray;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+#footer .install .row img{
+    border: 1px solid var(--dark-green);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#footer .install img{
+    margin: 10px 0 15px 0;
+    cursor: pointer;
+}
+
+#footer .follow i:hover,
+#footer a:hover{
+    color: var(--light-green);
+}
+
+footer .copyright{
+    text-align: center;
+    width: 100%;
+}
+
+/* UNDER CONSTRUCTION PAGE 🚧🚧🚦 */
+#under-construction{
+    max-width: var(--max-width);
+    margin: auto;
+    height: 100vh;
+    width: 100%;
+    padding: 400px 20px;
+    text-align: center;
+}
+
+#under-construction h1{
+    font-size: 72px;
+}
+
+#under-construction h4{
+    margin-top: 30px;
+    font-style: italic;
+}
+
+/* MEDIA QUERY  */
+
+@media (max-width: 1245px){
+    #features {
+        justify-content: center;
+        padding: 40px 250px;
+    }
+}
+
+@media (max-width: 1220px){
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #e3e6f3;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+    #navbar.active{
+        right: 0px;
+    }
+    #navbar li{
+        margin-bottom: 30px;
+    }
+    #mobile{
+        display: flex;
+        align-items: center;
+    }
+    #mobile i{
+        color: var(--dark-green);
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    #close{
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: var(--dark-green);
+        font-size: 24px;
+    }
+
+    #cart{
+        display: none;
+    }
+
+    #hero{
+        height: 70vh;
+        background-position: top 50% right -10%;
+        background-size: 50%;
+    }
+
+    #features{
+        justify-content: center;
+        padding: 40px 20px;
+    }
+
+    #featured-products .product-container, #new-arrivals .product-container {
+        justify-content: center;
+        gap: 30px;
+    }
+
+    #cta-banner {
+        padding: 50px 20px;
+    }
+
+    #banner2 .banner-box {
+        min-width: 100%;
+        height: 30vh;
+    }
+
+    #banner2 .banner-box2 {
+        min-width: 100%;
+        height: 30vh;
+    }
+
+    #banner3 .banner-box3,
+    #banner3 .banner-box4,
+    #banner3 .banner-box5 {
+        width: 25%;
+    }
+
+    #newsletter .form {
+        width: 70%;
+    }
+
+}
+
+@media (max-width: 477px){
+    #hero {
+        height: 80vh;
+        background-position: top 45% right -100%;
+        background-size: 70%;
+    }
+
+    #featured-products .product, #new-arrivals .product {
+        width: 100%;
+        margin: 0 0;
+    }
+
+    #banner2 {
+        gap: 20px;
+    }
+
+    #banner2 .banner-box {
+        min-width: 100%;
+        height: 35vh;
+    }
+
+    #banner2 .banner-box2 {
+        min-width: 100%;
+        height: 35vh;
+    }
+
+    #banner3 .banner-box3,
+    #banner3 .banner-box4,
+    #banner3 .banner-box5 {
+        width: 100%;
+    }
+
+    #newsletter .form {
+        width: 100%;
+    }
+}
