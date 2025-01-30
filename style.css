@@ -730,7 +730,7 @@ footer .copyright{
 
 @media (max-width: 477px){
     #hero {
-        height: 80vh;
+        height: 100vh;
         background-position: top 45% right -100%;
         background-size: 70%;
     }
