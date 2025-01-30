@@ -740,6 +740,10 @@ footer .copyright{
         margin: 0 0;
     }
 
+    #cta-banner h2{
+        font-size: 42px;
+    }
+
     #banner2 {
         gap: 20px;
     }
