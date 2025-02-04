@@ -729,6 +729,47 @@ footer .copyright{
     line-height: 25px;
 }
 
+
+/* ABOUT PAGE */
+#about-head{
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+#about-head img{
+    width: 50%;
+    height: auto;
+}
+
+
+#about-head div{
+    padding-left: 40px;
+}
+
+#about-head .right-col p{
+    line-height: 2rem;
+}
+
+#about-head .right-col abbr{
+    line-height: 2rem;
+}
+
+#about-head .right-col marquee{
+    background-color: #ccc;
+    width: 100%;
+}
+
+#about-app{
+    max-width: var(--max-width);
+    margin: auto;
+    text-align: center;
+}
+
+
 /* UNDER CONSTRUCTION PAGE 🚧🚧🚦 */
 #under-construction{
     max-width: var(--max-width);
@@ -912,5 +953,22 @@ footer .copyright{
     }
     #product-details .right-col h2{
         padding: 20px 0px;
+    }
+
+    /* ABOUT US | ABOUT HEAD */
+
+    #about-head {
+        flex-direction: column;
+    }
+    #about-head img{
+        width: 100%;
+    }
+    #about-head div {
+        padding-left: initial;
+        padding-top: 40px;
+        text-align: center;
+    }
+    #about-head .right-col h2{
+        font-size: 36px;
     }
 }
